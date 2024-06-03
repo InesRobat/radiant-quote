@@ -38,7 +38,7 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
     {
       font,
       size: 0.5,
-      height: 0.2,
+      depth: 0.2,
       curveSegments: 8,
       bevelEnabled: true,
       bevelThickness: 0.1,
@@ -50,7 +50,7 @@ fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
   textGeometry.center();
 
   // Material
-  const material = new THREE.MeshNormalMaterial({ matcap: matcapTexture });
+  const material = new THREE.MeshNormalMaterial();
 
   const text = new THREE.Mesh(textGeometry, material);
   scene.add(text);
